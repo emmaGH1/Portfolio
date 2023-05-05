@@ -1,26 +1,30 @@
 import { useEffect, useState } from "react";
+import ToggleComponent from "./ToggleComponent";
 
-import { MdDarkMode, MdLightMode } from 'react-icons/all'
-
-const DarkMode = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(false)
-
-  useEffect(() => {
-    const preferredMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-    setDarkMode(preferredMode)
-  }, [])
-
-  const toggleDarkMode = () => {
-    const newMode = !darkMode
-    setDarkMode(newMode)
-    document.body.classList.toggle('dark', newMode)
-  }
-  
-  return (
-    <div onClick={toggleDarkMode}>
-      {darkMode ? <MdLightMode /> : <MdDarkMode />}
-    </div>
-  )
+type DarkModeProps = {
+  className?: string
 }
 
-export default DarkMode
+const DarkMode = ({ className }: DarkModeProps) => {
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    const preferredMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setDarkMode(preferredMode);
+    document.body.classList.toggle('dark', preferredMode);
+  }, []);
+
+  const toggleDarkMode = () => {
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    document.body.classList.toggle('dark', newMode);
+  };
+
+  return (
+    <div className={className}>
+      <ToggleComponent DarkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+    </div>
+  );
+};
+
+export default DarkMode;

@@ -31,13 +31,11 @@
 
   .app__navbar {
     width: 100%;
-  
-    display: flex;
     justify-content: space-between;
     align-items: center;
-  
-    padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.25);
+
+    @apply md:py-4 md:px-8 md:mt-0 self-center;
+    /* background: rgba(255, 255, 255, 0); */
     /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -46,22 +44,31 @@
     z-index: 2;
   }
 
-  .dark-mode {
-    --dark-primary: #333333,
-    --dark-primary-2: #1a1a1a,
-    --dark-secondary: #87CEFA,
-    --dark-accent: #FFA500,
+  .app__navbar:hover li:hover > .app__navbar-dot {
+    @apply bg-dark-accent dark:bg-light-accent;
+  }
+
+  .app__navbar-dot {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border-radius: 50%;
+  }
+
+  .app__navbar__mobile-glass-morph {
+      /* From https://css.glass */
+      @apply bg-light-secondary;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 3;
   }
 
   .app__page {
     @apply w-full h-screen mx-auto
   }
 
-  @media screen and (max-width: 600px) {
-    .app__page {
-      
-    }
-  }
+
 
 
 

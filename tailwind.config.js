@@ -34,7 +34,7 @@ export default {
         'light-secondary': '#6e8098',
         'light-accent': '#FFC107',
         'dark-primary': '#FFFFFF',
-        'dark-secondary': '#f4f6f8',
+        'dark-secondary': '#9daec2',
         'dark-accent': '#FFA500',
       },
       width: {
