@@ -37,7 +37,7 @@ const Navbar = ({ targetRef, toggleShow, setToggleShow }: TargetRefProp) => {
   return (
     <div className={` ${visible ? 'md:flex' : 'md:hidden'} flex app__navbar text-light-primary dark:text-dark-primary/90 md:bg-white/50 md:dark:bg-white/10`} >
       <div className="flex items-center mt-2 ml-4 md:ml-0 md:mt-0">
-        <span className="font-bold text-lg">Emma</span>
+        <span className="font-bold text-xl">Emma</span>
         <span className="hidden sm:flex font-bold text-xl">.</span>
         <span className="hidden sm:flex self-end mb-1">dev</span>
       </div>

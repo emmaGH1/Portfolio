@@ -19,7 +19,7 @@ const GetGreetings = ({ className }: GetGreetingsProps) => {
       } else if (hour >= 18 && hour < 22) {
         setGreeting('Good evening 🌙')
       } else {
-        setGreeting('Hi 🙋‍♂️')
+        setGreeting('Hello, night owl 🦉')
       }
  })
 
