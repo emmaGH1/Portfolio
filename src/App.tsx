@@ -1,7 +1,8 @@
 import React, { useState, useRef} from 'react'
 
 import { Home, About, Skills, Work, Contact } from './pages'
-import { Navbar } from './components'
+
+import { Navbar, NavigationDots } from './components/index'
 
 const App = () => {
   const [toggleShow, setToggleShow] = useState<boolean>(false)
@@ -16,8 +17,9 @@ const App = () => {
 
 
   return (
-    <div className='flex flex-col' onClick={handleClickOutside}>
+    <div className='flex flex-col selection:bg-black/10 selection:dark:bg-white/' onClick={handleClickOutside}>
        <Navbar toggleShow={toggleShow} setToggleShow={setToggleShow} targetRef={targetRef} />
+       <NavigationDots />
        <Home />
        <About />
        <Skills />

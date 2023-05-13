@@ -4,10 +4,11 @@ import lottie from "lottie-web";
 type useAnimationProps = {
     data: string,
     loop?: boolean,
-    autoplay?: boolean
+    autoplay?: boolean,
+    className?: string
 }
 
-export const UseLottieAnimation = ({ data, loop = true, autoplay = true }: useAnimationProps) => {
+const UseLottieAnimation = ({ data, loop = true, autoplay = true, className }: useAnimationProps) => {
     const container = useRef<HTMLDivElement>(null)
     const animationData = JSON.parse(data)
     useEffect(() => {
@@ -23,6 +24,8 @@ export const UseLottieAnimation = ({ data, loop = true, autoplay = true }: useAn
     }, [])
 
     return (
-        <div ref={container}></div>
+        <div ref={container} className={className}></div>
     )
 }
+
+export default UseLottieAnimation

@@ -19,12 +19,12 @@
   }
 
  body {
-    font-family: 'Rubik', 'sans-serif';
+    font-family: 'Rubik', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #edf2f8;
   }
 
   h1 {
-    font-family: 'Josefin Sans', 'sans-serif';
+    font-family: 'Josefin Sans', monospace 'sans-serif';
   }
 
 
@@ -65,7 +65,7 @@
   }
 
   .app__page {
-    @apply w-full h-screen mx-auto
+    @apply w-full min-h-screen mx-auto
   }
 
 

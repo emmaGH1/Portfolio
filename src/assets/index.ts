@@ -1,2 +1,2 @@
-export { default as animationData } from './lottie-animations/hero-page-animation.json'
-export { default as ResumeIcon } from './icons/resume-icon.png'
+export { default as heroAnimationData } from './lottie-animations/hero-page-animation.json'
+export { default as windmillAnimationData } from './lottie-animations/windmill-animation.json'

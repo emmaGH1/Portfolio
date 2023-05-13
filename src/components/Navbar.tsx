@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef, MouseEventHandler, Dispatch, SetStateAction } from "react";
-import { AiFillGithub, BsArrowDown, CgMenuRight, AiOutlineRobot, IoCloseSharp, AiOutlineLinkedin, FiGithub } from "react-icons/all";
+import { useState, useEffect, Dispatch, SetStateAction } from "react";
+import { BsArrowDown, CgMenuRight, IoCloseSharp, AiOutlineLinkedin, FiGithub } from "react-icons/all";
 
 import { DarkMode, GetGreetings } from './index';
 
@@ -31,11 +31,11 @@ const Navbar = ({ targetRef, toggleShow, setToggleShow }: TargetRefProp) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [visible, prevScrollPos]);
 
 
   return (
-    <div className={` ${visible ? 'md:flex' : 'md:hidden'} flex app__navbar text-light-primary dark:text-dark-primary/90 md:bg-white/50 md:dark:bg-white/10`} >
+    <div className={` ${visible ? 'md:flex' : 'md:hidden'} flex app__navbar text-light-primary dark:text-dark-primary/90 md:bg-white/50 md:dark:bg-white/10 transition-colors`} >
       <div className="flex items-center mt-2 ml-4 md:ml-0 md:mt-0">
         <span className="font-bold text-xl">Emma</span>
         <span className="hidden sm:flex font-bold text-xl">.</span>
@@ -50,7 +50,7 @@ const Navbar = ({ targetRef, toggleShow, setToggleShow }: TargetRefProp) => {
         </div>
 
         {/* Sidebar  */}
-        <div className={`${toggleShow ? 'flex' : 'hidden'} flex-col fixed app__navbar__mobile-glass-morph w-7/10 right-0 top-0 h-screen`}>
+        <div className={`${toggleShow ? 'flex' : 'hidden'} flex-col fixed app__navbar__mobile-glass-morph w-7/10 right-0 top-0 h-screen dark:text-dark-primary/80`}>
               
               <div className="flex justify-between items-center">
                 <DarkMode className="mt-5 ml-3"/>
