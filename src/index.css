@@ -65,8 +65,17 @@
   }
 
   .app__page {
-    @apply w-full min-h-screen mx-auto
+    @apply w-full h-screen md:!h-screen mx-auto;
+  } 
+
+  .primary {
+    @apply bg-light-primary dark:bg-dark-primary
   }
+
+  .primary-2 {
+    @apply bg-light-primary-2 dark:bg-dark-primary-2 text-light-primary dark:text-dark-primary 
+  }
+ 
 
 
 

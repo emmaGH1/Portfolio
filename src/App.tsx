@@ -17,7 +17,7 @@ const App = () => {
 
 
   return (
-    <div className='flex flex-col selection:bg-black/10 selection:dark:bg-white/' onClick={handleClickOutside}>
+    <div className='flex flex-col selection:bg-black/10 selection:dark:bg-white/10' onClick={handleClickOutside}>
        <Navbar toggleShow={toggleShow} setToggleShow={setToggleShow} targetRef={targetRef} />
        <NavigationDots />
        <Home />

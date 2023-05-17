@@ -24,10 +24,13 @@ export default {
         'light-primary-2': '#F5F5F5',
         'light-secondary': '#313bac',
         'light-accent': '#FFC107',
-        'dark-primary': '#333333',
+        'dark-primary': '#121721',
         'dark-primary-2': '#1a1a1a',
         'dark-secondary': '#87CEFA',
         'dark-accent': '#FFA500',
+      },
+      backgroundImage: {
+        'custom-home': "url('/src/assets/images/floating-cogs.svg')"
       },
       textColor: {
         'light-primary': '#000000',

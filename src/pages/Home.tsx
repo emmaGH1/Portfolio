@@ -1,14 +1,14 @@
-import React from 'react'
 import { GetGreetings, UseLottieAnimation } from '../components'
 import { heroAnimationData } from '../assets/index'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/all'
 import { paragraphs } from '../assets/constants'
 
+
 const Home = () => {
   const data = JSON.stringify(heroAnimationData)
   
   return (
-    <div id='home' className='app__page bg-light-primary dark:bg-dark-primary pt-20'>
+    <div id='home' className='app__page primary pt-20'>
        <div className='w-full md:w-9/10 mx-auto flex'>
           <div>
             
@@ -26,7 +26,7 @@ const Home = () => {
 
                         <div className='hidden md:flex flex-col mt-5 w-9/10 mx-auto'>
                           <div className='flex justify-center mb-3'>
-                            <a href='../../public/Emmanuel_Maduakor_Resume.pdf' target='_blank' download={true} className='flex bg-light-accent dark:bg-dark-accent hover:bg-dark-accent dark:hover:bg-transparent hover:dark:text-dark-primary dark:hover:underline rounded-md cursor-pointer transition-colors w-1/4 justify-center p-3'>
+                            <a href='../../public/Emmanuel_Maduakor_Resume.pdf' target='_blank' download={true} className='flex bg-light-accent dark:bg-dark-accent hover:bg-dark-accent dark:hover:bg-transparent hover:dark:text-dark-primary dark:hover:underline rounded-md cursor-pointer transition-colors justify-center p-3'>
                                 Download resume
                             </a> 
                           </div>

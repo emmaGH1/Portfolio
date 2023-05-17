@@ -35,8 +35,8 @@ const Navbar = ({ targetRef, toggleShow, setToggleShow }: TargetRefProp) => {
 
 
   return (
-    <div className={` ${visible ? 'md:flex' : 'md:hidden'} flex app__navbar text-light-primary dark:text-dark-primary/90 md:bg-white/50 md:dark:bg-white/10 transition-colors`} >
-      <div className="flex items-center mt-2 ml-4 md:ml-0 md:mt-0">
+    <div className={` ${visible ? 'md:flex' : 'md:hidden'} flex app__navbar text-dark-primary/70 dark:text-light-primary md:bg-white/50 md:dark:bg-white/10 transition-colors`} >
+      <div className="flex items-center mt-2 ml-4 md:ml-0 md:mt-0 text-light-primary dark:text-dark-primary/70">
         <span className="font-bold text-xl">Emma</span>
         <span className="hidden sm:flex font-bold text-xl">.</span>
         <span className="hidden sm:flex self-end mb-1">dev</span>
@@ -91,7 +91,7 @@ const Navbar = ({ targetRef, toggleShow, setToggleShow }: TargetRefProp) => {
      {/* Tablets and desktops */}
       <ul className="hidden md:flex">
         {navLinksArray.map((item: string) => (
-          <li className="uppercase mx-4 flex flex-col justify-center items-center" key={`link-${item}`}>
+          <li className="uppercase mx-4 flex flex-col justify-center items-center text-light-primary dark:text-dark-primary" key={`link-${item}`}>
             <div className="app__navbar-dot mb-1"></div>
             <a href={`#${item}`}>{item}</a>
           </li>
