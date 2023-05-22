@@ -8,8 +8,8 @@ const Home = () => {
   const data = JSON.stringify(heroAnimationData)
   
   return (
-    <div id='home' className='app__page primary pt-20'>
-       <div className='w-full md:w-9/10 mx-auto flex'>
+    <div id='home' className='pt-20 app__page primary'>
+       <div className='flex w-full mx-auto md:w-9/10'>
           <div>
             
             <h1 className='ml-5'>
@@ -17,31 +17,31 @@ const Home = () => {
             </h1>
 
             <div className='flex flex-col-reverse md:flex-row '>
-                <div className='w-5/10 flex flex-col items-center mx-auto'>
-                        <h1 className='dark:text-dark-accent text-light-secondary font-extrabold font-heading uppercase text-5xl md:mt-32 mb-0 text-center md:text-left'>Frontend Developer<span className='text-7xl'>.</span></h1>
+                <div className='flex flex-col items-center mx-auto w-5/10'>
+                        <h1 className='mb-0 text-5xl font-extrabold text-center uppercase dark:text-dark-accent text-light-secondary font-heading md:mt-32 md:text-left'>Frontend Developer<span className='text-7xl'>.</span></h1>
 
-                        <div className='text-xl dark:text-dark-primary/50  font-paragraph flex w-full mx-auto flex-wrap text-center md:text-start'>
+                        <div className='flex flex-wrap w-full mx-auto text-xl text-center dark:text-dark-primary/50 font-paragraph md:text-start'>
                           {paragraphs.intro}
                         </div>
 
-                        <div className='hidden md:flex flex-col mt-5 w-9/10 mx-auto'>
+                        <div className='flex-col hidden mx-auto mt-5 md:flex w-9/10'>
                           <div className='flex justify-center mb-3'>
-                            <a href='../../public/Emmanuel_Maduakor_Resume.pdf' target='_blank' download={true} className='flex bg-light-accent dark:bg-dark-accent hover:bg-dark-accent dark:hover:bg-transparent hover:dark:text-dark-primary dark:hover:underline rounded-md cursor-pointer transition-colors justify-center p-3'>
+                            <a href='../../public/Emmanuel_Maduakor_Resume.pdf' target='_blank' download={true} className='flex justify-center p-3 transition-colors rounded-md cursor-pointer bg-light-accent dark:bg-dark-accent hover:bg-dark-accent dark:hover:bg-transparent hover:dark:text-dark-primary dark:hover:underline'>
                                 Download resume
                             </a> 
                           </div>
                           <div className='flex justify-center'>
                             <a href="https://github.com/emmaGH1" target='_blank'>
-                              <AiFillGithub className='mr-1 w-10 h-10 text-light-primary dark:text-dark-primary hover:text-light-secondary hover:dark:text-dark-secondary cursor-pointer'/>
+                              <AiFillGithub className='w-10 h-10 mr-1 cursor-pointer text-light-primary dark:text-dark-primary hover:text-light-secondary hover:dark:text-dark-secondary'/>
                             </a>
                             <a href="https://www.linkedin.com/in/maduakor-emmanuel-5a141b245/" target='_blank'>
-                              <AiFillLinkedin className='mr-3 w-10 h-10 text-light-primary dark:text-dark-primary hover:text-light-secondary hover:dark:text-dark-secondary cursor-pointer'/>
+                              <AiFillLinkedin className='w-10 h-10 mr-3 cursor-pointer text-light-primary dark:text-dark-primary hover:text-light-secondary hover:dark:text-dark-secondary'/>
                             </a>
                           </div>
 
                         </div>
 
-                        <div className='hidden md:flex flex-col mt-20 text-light-primary dark:text-dark-primary/80'>
+                        <div className='flex-col hidden mt-20 md:flex text-light-primary dark:text-dark-primary/80'>
                           <q>Simplicity is the ultimate sophistication.</q>
                           <span className='text-center dark:text-dark-accent text-light-accent'>- Albert Einstein</span>
                         </div>
@@ -53,14 +53,14 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='flex mt-5 w-9/10 mx-auto justify-center items-center md:hidden'>
+            <div className='flex items-center justify-center mx-auto mt-5 w-9/10 md:hidden'>
               <a href="https://github.com/emmaGH1" target='_blank'>
-                <AiFillGithub className='mr-1 w-6 h-6 text-light-primary dark:text-dark-primary'/>
+                <AiFillGithub className='w-6 h-6 mr-1 text-light-primary dark:text-dark-primary'/>
               </a>
               <a href="https://www.linkedin.com/in/maduakor-emmanuel-5a141b245/" target='_blank'>
-                <AiFillLinkedin className='mr-3 w-6 h-6 text-light-primary dark:text-dark-primary'/>
+                <AiFillLinkedin className='w-6 h-6 mr-3 text-light-primary dark:text-dark-primary'/>
               </a>
-              <button className='flex bg-light-accent dark:bg-dark-accent p-1 px-2 rounded-md'>
+              <button className='flex p-1 px-2 rounded-md bg-light-accent dark:bg-dark-accent'>
                 Download resume
               </button>
             </div>

@@ -75,8 +75,21 @@
   .primary-2 {
     @apply bg-light-primary-2 dark:bg-dark-primary-2 text-light-primary dark:text-dark-primary 
   }
- 
 
+.app__work-hover {
+  display: none;
+  opacity: 0;
+}
+ 
+.app__work:hover > .app__work-hover {
+  display: flex;
+  opacity: 100;
+  z-index: 999px;
+}
+
+.app__work:hover > .app__work-img, .app__work:hover > .app__work-description{
+  @apply blur-sm transition-all duration-300
+}
 
 
 
