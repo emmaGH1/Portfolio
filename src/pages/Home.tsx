@@ -42,7 +42,7 @@ const Home = () => {
                         </div>
 
                         <div className='flex-col hidden mt-20 md:flex text-light-primary dark:text-dark-primary/80'>
-                          <q>Simplicity is the ultimate sophistication.</q>
+                          <q><i>Simplicity is the ultimate sophistication.</i></q>
                           <span className='text-center dark:text-dark-accent text-light-accent'>- Albert Einstein</span>
                         </div>
                 </div>

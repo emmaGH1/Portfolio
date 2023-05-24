@@ -21,20 +21,42 @@
  body {
     font-family: 'Rubik', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #edf2f8;
+    overflow: auto;
+    
   }
 
   h1 {
     font-family: 'Josefin Sans', monospace 'sans-serif';
   }
 
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-dark-accent
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-light-secondary;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-light-secondary/95
+}
 
   .app__navbar {
     width: 100%;
     justify-content: space-between;
     align-items: center;
 
-    @apply md:py-4 md:px-8 md:mt-0 self-center;
+    @apply self-center md:py-4 md:px-8 md:mt-0;
     /* background: rgba(255, 255, 255, 0); */
     /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
     backdrop-filter: blur(4px);
@@ -82,13 +104,13 @@
 }
  
 .app__work:hover > .app__work-hover {
-  display: flex;
+  @apply lg:flex;
   opacity: 100;
   z-index: 999px;
 }
 
 .app__work:hover > .app__work-img, .app__work:hover > .app__work-description{
-  @apply blur-sm transition-all duration-300
+  @apply lg:blur-sm transition-all duration-300 blur-none
 }
 
 
