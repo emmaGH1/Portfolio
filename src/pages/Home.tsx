@@ -20,7 +20,7 @@ const Home = () => {
                 <div className='flex flex-col items-center mx-auto w-5/10'>
                         <h1 className='mb-0 text-5xl font-extrabold text-center uppercase dark:text-dark-accent text-light-secondary font-heading md:mt-32 md:text-left'>Frontend Developer<span className='text-7xl'>.</span></h1>
 
-                        <div className='flex flex-wrap w-full mx-auto text-xl text-center dark:text-dark-primary/50 font-paragraph md:text-start'>
+                        <div className='flex flex-wrap w-full mx-auto text-xl text-center dark:text-dark-primary/50 font-paragraph justify-center'>
                           {paragraphs.intro}
                         </div>
 

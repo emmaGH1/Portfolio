@@ -59,7 +59,7 @@ const Contact = () => {
         Let's <span className='text-blue-500 '>Connect!</span> 
       </h1>
 
-      <div className='mt-10 lg:flex mx-auto lg:w-4/5 justify-between items-center lg:flex-row-reverse'>  
+      <div className='mt-10 flex mx-auto lg:w-4/5 justify-between items-center lg:flex-row-reverse flex-col-reverse'>  
           <form
           className="w-4/5 mx-auto md:w-2/4 xl:w-2/6"
           onSubmit={handleSubmit(onSubmit)}
@@ -113,7 +113,7 @@ const Contact = () => {
 
           </form>
 
-          <div className='hidden md:flex overflow-hidden w-96 h-96 '>
+          <div className='flex overflow-hidden md:w-96 md:h-96 w-64 h-64 mx-auto md:mx-0 mb-10'>
            <UseLottieAnimation data={data}/>
           </div>
       </div>

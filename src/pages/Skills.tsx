@@ -15,9 +15,9 @@ const Skills = () => {
       <div className='flex justify-center mx-auto mt-10 w-9/10 md:mt-20'>
           <div className='grid grid-cols-3 gap-10 md:w-full dark:text-dark-primary/80 md:grid-cols-4 md:justify-items-center md:content-center md:gap-20'>
               {techStacks.map(each => (
-                <div className='' key={`#${each.name}`}>
+                <div className='flex flex-col justify-center items-center md:block' key={`#${each.name}`}>
                   <img src={each.url} alt={each.name} className='flex justify-center w-10 h-10 mr-2'/>
-                  <div className='mt-2 lg:mt-3'>{each.name}</div>
+                  <div className='mt-2 lg:mt-3 text-center md:text-start'>{each.name}</div>
                 </div>
               ))}
           </div>

@@ -64,7 +64,6 @@ const Navbar = ({ targetRef, toggleShow, setToggleShow }: TargetRefProp) => {
                   <span className="flex font-bold text-xl">.</span>
                   <span className="flex mt-1">dev</span>
                 </div>
-                <GetGreetings className="flex justify-end"/>
               </div>
             <div className="w-full h-[2px] bg-white/50"/>
           </div>
