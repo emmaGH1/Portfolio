@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form'
 import emailjs from '@emailjs/browser'
+import { UseLottieAnimation } from '../components';
+import { marsAnimationData } from '../assets';
 
 interface formValuesProps {
   name: string,
@@ -11,6 +13,7 @@ interface formValuesProps {
 const Contact = () => {
   const [loading, setLoading] = useState<boolean>(false)
   const { register, handleSubmit, formState: { errors}, reset } = useForm<formValuesProps>()
+  const data = JSON.stringify(marsAnimationData)
 
   const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
   const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
@@ -52,35 +55,35 @@ const Contact = () => {
   return (
     <div id='contact' className='app__page primary'>
       
-      <h1 className='mt-16 text-dark-accent ml-7 '>
-        Let's Connect!
+      <h1 className='mt-20 md:mt-10 text-dark-accent ml-7 '>
+        Let's <span className='text-blue-500 '>Connect!</span> 
       </h1>
 
-      <div className=''>  
+      <div className='mt-10 lg:flex mx-auto lg:w-4/5 justify-between items-center lg:flex-row-reverse'>  
           <form
-          className="w-4/5 mx-auto"
+          className="w-4/5 mx-auto md:w-2/4 xl:w-2/6"
           onSubmit={handleSubmit(onSubmit)}
           >
-          <div className="mb-6">
+          <div className="w-full mx-auto mb-6">
             <label htmlFor="name" className="block mb-2 text-light-secondary">
               Name
             </label>
             <input
               {...register('name', { required: true })}
-              className="w-full px-4 py-2 rounded-lg bg-light-accent text-dark-primary focus:outline-none focus:ring focus:border-light-accent"
+              className='w-full py-2 rounded-md dark:bg-light-secondary focus:outline-none bg-light-accent text-dark-primary lg:py-4 px-1'
             />
             {errors.name && (
               <span className="text-red-500">This field is required</span>
             )}
           </div>
 
-          <div className="mb-6">
+          <div className="w-full mx-auto mb-6">
             <label htmlFor="email" className="block mb-2 text-light-secondary">
               Email
             </label>
             <input
               {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
-              className="w-full px-4 py-2 rounded-lg bg-light-accent text-dark-primary focus:outline-none focus:ring focus:border-light-accent"
+              className='w-full py-2 rounded-md dark:bg-light-secondary focus:outline-none bg-light-accent text-dark-primary lg:py-4 px-1'
             />
             {errors.email && (
               <span className="text-red-500">
@@ -89,13 +92,13 @@ const Contact = () => {
             )}
           </div>
 
-          <div className="mb-6">
+          <div className="w-full mx-auto mb-6">
             <label htmlFor="message" className="block mb-2 text-light-secondary">
               Message
             </label>
             <textarea
               {...register('message', { required: true })}
-              className="w-full px-4 py-2 rounded-lg bg-light-accent text-dark-primary focus:outline-none focus:ring focus:border-light-accent max-h-64"
+              className='w-full h-20 lg:h-24 p-1 rounded-md dark:bg-light-secondary focus:outline-none bg-light-accent text-dark-primary px-2 pt-2'
             ></textarea>
             {errors.message && (
               <span className="text-red-500">This field is required</span>
@@ -104,11 +107,15 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-full py-2 transition-colors duration-300 rounded-lg bg-dark-accent text-light-primary hover:bg-light-accent hover:text-dark-primary"
+            className='w-full p-2 px-5 rounded-md dark:bg-dark-accent dark:text-dark-primary/80 bg-light-secondary text-dark-primary lg:py-3 hover:dark:bg-light-accent'
           >Send Message
           </button>
 
           </form>
+
+          <div className='hidden md:flex overflow-hidden w-96 h-96 '>
+           <UseLottieAnimation data={data}/>
+          </div>
       </div>
 
     </div>

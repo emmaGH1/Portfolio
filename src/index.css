@@ -21,7 +21,6 @@
  body {
     font-family: 'Rubik', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #edf2f8;
-    overflow: auto;
     
   }
 
@@ -31,7 +30,7 @@
 
   /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
 
 }
 
@@ -106,6 +105,7 @@
 .app__work:hover > .app__work-hover {
   @apply lg:flex;
   opacity: 100;
+  transition: ease-in;
   z-index: 999px;
 }
 
