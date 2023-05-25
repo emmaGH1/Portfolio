@@ -57,7 +57,7 @@ const Work = () => {
         }
       </div>
 
-      <a className='flex justify-center w-3/5 mx-auto mt-10 underline transition hover:text-light-secondary hover:dark:text-dark-accent' href='https://github.com/emmaGH1' target='_blank' >
+      <a className='flex justify-center w-3/5 mx-auto mt-20 underline transition hover:text-light-secondary hover:dark:text-dark-accent' href='https://github.com/emmaGH1' target='_blank' >
         See more on Github ...
       </a>
 

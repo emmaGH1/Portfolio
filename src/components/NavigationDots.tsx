@@ -31,7 +31,7 @@ const NavigationDots = () => {
   }, []);
 
   return (
-    <div className="hidden lg:flex flex-col fixed z-40 right-0 bottom-0 lg:mb-60 mr-10">
+    <div className="hidden lg:flex flex-col fixed z-40 right-0 bottom-0 lg:mb-20 mr-10">
       {navList.map((item, index) => (
         <a
           onClick={() => handleClick(item)}

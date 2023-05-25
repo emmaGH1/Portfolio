@@ -86,7 +86,7 @@
   }
 
   .app__page {
-    @apply w-full h-screen md:!h-screen mx-auto;
+    @apply w-full md:!h-screen min-h-screen;
   } 
 
   .primary {
@@ -113,6 +113,8 @@
   @apply lg:blur-sm transition-all duration-300 blur-none
 }
 
-
+.text-color-pry {
+  @apply text-light-primary dark:text-dark-primary
+}
 
 

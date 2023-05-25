@@ -8,65 +8,45 @@ const Home = () => {
   const data = JSON.stringify(heroAnimationData)
   
   return (
-    <div id='home' className='pt-20 app__page primary'>
-       <div className='flex w-full mx-auto md:w-9/10'>
-          <div>
-            
-            <h1 className='ml-5'>
-              <GetGreetings className='text-3xl text-light-primary dark:text-dark-primary ' />
-            </h1>
+    <div id='home' className='h-full pt-20 primary lg:h-screen'>
+      <div className='h-full mx-auto w-9/10'>
 
-            <div className='flex flex-col-reverse md:flex-row '>
-                <div className='flex flex-col items-center mx-auto w-5/10'>
-                        <h1 className='mb-0 text-5xl font-extrabold text-center uppercase dark:text-dark-accent text-light-secondary font-heading md:mt-32 md:text-left'>Frontend Developer<span className='text-7xl'>.</span></h1>
-
-                        <div className='flex flex-wrap w-full mx-auto text-xl text-center dark:text-dark-primary/50 font-paragraph justify-center'>
-                          {paragraphs.intro}
-                        </div>
-
-                        <div className='flex-col hidden mx-auto mt-5 md:flex w-9/10'>
-                          <div className='flex justify-center mb-3'>
-                            <a href='../../public/Emmanuel_Maduakor_Resume.pdf' target='_blank' download={true} className='flex justify-center p-3 transition-colors rounded-md cursor-pointer bg-light-accent dark:bg-dark-accent hover:bg-dark-accent dark:hover:bg-transparent hover:dark:text-dark-primary dark:hover:underline'>
-                                Download resume
-                            </a> 
-                          </div>
-                          <div className='flex justify-center'>
-                            <a href="https://github.com/emmaGH1" target='_blank'>
-                              <AiFillGithub className='w-10 h-10 mr-1 cursor-pointer text-light-primary dark:text-dark-primary hover:text-light-secondary hover:dark:text-dark-secondary'/>
-                            </a>
-                            <a href="https://www.linkedin.com/in/maduakor-emmanuel-5a141b245/" target='_blank'>
-                              <AiFillLinkedin className='w-10 h-10 mr-3 cursor-pointer text-light-primary dark:text-dark-primary hover:text-light-secondary hover:dark:text-dark-secondary'/>
-                            </a>
-                          </div>
-
-                        </div>
-
-                        <div className='flex-col hidden mt-20 md:flex text-light-primary dark:text-dark-primary/80'>
-                          <q><i>Simplicity is the ultimate sophistication.</i></q>
-                          <span className='text-center dark:text-dark-accent text-light-accent'>- Albert Einstein</span>
-                        </div>
-                </div>
-            
-
-                <div className='overflow-hidden'>
-                  <UseLottieAnimation data={data} />
-                </div>
+          <div className='mt-2'>
+            <GetGreetings className='text-2xl text-color-pry' />
+          </div>
+          
+          {/* Main content */}
+          <div className='flex-row-reverse items-center justify-evenly md:flex'>
+            <div className='md:w-96 md:h-96'>
+              <UseLottieAnimation data={data} />
             </div>
 
-            <div className='flex items-center justify-center mx-auto mt-5 w-9/10 md:hidden'>
-              <a href="https://github.com/emmaGH1" target='_blank'>
-                <AiFillGithub className='w-6 h-6 mr-1 text-light-primary dark:text-dark-primary'/>
-              </a>
-              <a href="https://www.linkedin.com/in/maduakor-emmanuel-5a141b245/" target='_blank'>
-                <AiFillLinkedin className='w-6 h-6 mr-3 text-light-primary dark:text-dark-primary'/>
-              </a>
-              <button className='flex p-1 px-2 rounded-md bg-light-accent dark:bg-dark-accent'>
-                Download resume
-              </button>
+            <div className='mb-10 mt-7'>
+              <div className='flex flex-col justify-center mx-auto'>
+                <h1 className='flex justify-center p-0 my-0 font-bold text-dark-accent font-heading'>Frontend Dev🧑‍💻</h1>
+                <p className='flex justify-center mt-2 mb-5 text-center dark:text-dark-primary/50'>{paragraphs.intro}</p>                
+              </div>
+
+              <div className='flex flex-col justify-center'>
+                <div className='flex justify-center'>
+                  <a href='../../public/Emmanuel_Maduakor_Resume.pdf' className='px-4 py-3 transition-colors rounded-md cursor-pointer bg-light-accent dark:bg-dark-accent hover:bg-dark-accent dark:hover:bg-transparent hover:dark:text-dark-primary dark:hover:underline' target='_blank'>
+                    download resume
+                  </a>
+                </div>
+                <div className='flex justify-center mt-5'>
+                  <a href='' target='_blank'> 
+                   <AiFillGithub className='w-10 h-10 mr-3 cursor-pointer text-light-primary dark:text-dark-primary hover:text-light-secondary hover:dark:text-dark-secondary' /> 
+                  </a>
+                  <a href="" target='_blank'> 
+                    <AiFillLinkedin className='w-10 h-10 mr-1 cursor-pointer text-light-primary dark:text-dark-primary hover:text-light-secondary hover:dark:text-dark-secondary' />
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
-       </div>
 
+      </div>
     </div>
   )
 }
