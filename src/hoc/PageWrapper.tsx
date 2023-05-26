@@ -7,9 +7,6 @@ const PageWrapper = <P extends object>(Component: ComponentType<P>) => {
 
   return (props: P) => (
     <motion.div
-      initial="initial"
-      whileInView="show"
-      variants={pageVariants}
     >
       <Component {...props} />
     </motion.div>
