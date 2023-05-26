@@ -1,8 +1,8 @@
 import React, { useState, useRef} from 'react'
 
-import { Home, About, Skills, Work, Contact } from './pages'
 
 import { Navbar, NavigationDots } from './components/index'
+import { AboutPage, ContactPage, HomePage, SkillsPage, WorkPage } from './hoc'
 
 const App = () => {
   const [toggleShow, setToggleShow] = useState<boolean>(false)
@@ -17,15 +17,15 @@ const App = () => {
 
 
   return (
-    <div className='flex flex-col selection:bg-black/10 selection:dark:bg-white/10' onClick={handleClickOutside}>
-       <Navbar toggleShow={toggleShow} setToggleShow={setToggleShow} targetRef={targetRef} />
-       <NavigationDots />
-       <Home />
-       <About />
-       <Skills />
-       <Work />
-       <Contact />
-    </div>
+      <div className='flex flex-col selection:bg-black/10 selection:dark:bg-white/10' onClick={handleClickOutside}>
+        <Navbar toggleShow={toggleShow} setToggleShow={setToggleShow} targetRef={targetRef} />
+        <NavigationDots />
+        <HomePage />
+        <AboutPage />
+        <SkillsPage />
+        <WorkPage />
+        <ContactPage />
+      </div>
   )
 }
 

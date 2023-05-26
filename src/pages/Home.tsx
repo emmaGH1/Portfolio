@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import { GetGreetings, UseLottieAnimation } from '../components'
 import { heroAnimationData } from '../assets/index'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/all'

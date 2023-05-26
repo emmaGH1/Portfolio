@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+
 import { useForm, SubmitHandler } from 'react-hook-form'
 import emailjs from '@emailjs/browser'
 import { UseLottieAnimation } from '../components';
@@ -59,7 +61,7 @@ const Contact = () => {
         Let's <span className='text-blue-500 '>Connect!</span> 
       </h1>
 
-      <div className='mt-10 flex mx-auto lg:w-4/5 justify-between items-center lg:flex-row-reverse flex-col-reverse'>  
+      <div className='flex flex-col-reverse items-center justify-between mx-auto mt-10 mb-10 lg:w-4/5 lg:flex-row-reverse'>  
           <form
           className="w-4/5 mx-auto md:w-2/4 xl:w-2/6"
           onSubmit={handleSubmit(onSubmit)}
@@ -70,7 +72,7 @@ const Contact = () => {
             </label>
             <input
               {...register('name', { required: true })}
-              className='w-full py-2 rounded-md dark:bg-light-secondary focus:outline-none bg-light-accent text-dark-primary lg:py-4 px-1'
+              className='w-full px-1 py-2 rounded-md dark:bg-light-secondary focus:outline-none bg-light-accent text-dark-primary lg:py-4'
             />
             {errors.name && (
               <span className="text-red-500">This field is required</span>
@@ -83,7 +85,7 @@ const Contact = () => {
             </label>
             <input
               {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
-              className='w-full py-2 rounded-md dark:bg-light-secondary focus:outline-none bg-light-accent text-dark-primary lg:py-4 px-1'
+              className='w-full px-1 py-2 rounded-md dark:bg-light-secondary focus:outline-none bg-light-accent text-dark-primary lg:py-4'
             />
             {errors.email && (
               <span className="text-red-500">
@@ -98,7 +100,7 @@ const Contact = () => {
             </label>
             <textarea
               {...register('message', { required: true })}
-              className='w-full h-20 lg:h-24 p-1 rounded-md dark:bg-light-secondary focus:outline-none bg-light-accent text-dark-primary px-2 pt-2'
+              className='w-full h-20 p-1 px-2 pt-2 rounded-md lg:h-24 dark:bg-light-secondary focus:outline-none bg-light-accent text-dark-primary'
             ></textarea>
             {errors.message && (
               <span className="text-red-500">This field is required</span>
@@ -113,7 +115,7 @@ const Contact = () => {
 
           </form>
 
-          <div className='flex overflow-hidden md:w-96 md:h-96 w-64 h-64 mx-auto md:mx-0 mb-10'>
+          <div className='flex w-64 h-64 mx-auto mb-10 overflow-hidden md:w-96 md:h-96 md:mx-0'>
            <UseLottieAnimation data={data}/>
           </div>
       </div>

@@ -1,6 +1,8 @@
 import { TSIcon, JSIcon, ReactIcon, NextJSIcon, ReduxIcon, TailwindIcon, HTMLIcon, CSSIcon} from './index'
+import { FaReact} from 'react-icons/all'
 
 import { DevJobs, SpaceTourism, Windbnb } from './index'
+
 
 interface TechStacksProps {
    name: string,
@@ -16,8 +18,18 @@ interface ProjectProps {
 
 export const paragraphs = {
        intro: `I build clean, responsive, and scalable websites.`,
-       aboutMe: `Hello and welcome to my portfolio! I'm Emma, a frontend developer with 1.5 years of experience. I'm passionate about crafting beautiful and intuitive user interfaces that make a real impact. I specialize in using technologies like React and Typescript to build clean, scalable and typesafe code that delivers a seamless user experience. In my work, I strive to maintain pixel-perfect designs and a sharp eye for detail. I'm also slowly transitioning to fullstack development to expand my skillset and take on new challenges.`,
-    }
+       aboutMe: [
+         `Greetings! I'm Emma, a frontend web developer based in Imo, Nigeria.`,
+         `💻 I embark on digital quests, wielding the mighty powers of React and TypeScript to conjure enchanting web experiences.`,
+         `🚀 With React's modular sorcery and TypeScript's spell of type safety, I weave scalable incantations that bewitch users with their visual splendor.`,
+         `🎨 Guided by my keen eye for design, I craft pixel-perfect wonders that leave users spellbound and craving for more.
+         `,
+         `💡 As a code wizard, I thrive on solving enigmatic puzzles, employing TypeScript's arcane rituals to ensure bug-free spells that defy even the trickiest of errors.`,
+         `🌍 In the realm of collaboration, I harmonize with fellow adventurers, leveraging React and TypeScript to conjure powerful enchantments that elevate productivity and code quality.`,
+         `🌟 Ever eager to expand my knowledge, I embark on quests to uncover the latest secrets of React and TypeScript, honing my skills to deliver unparalleled web wizardry.`,
+       ],
+      joke: `✨ Fun Developer Joke: Why did the web developer go broke? Because they lost their domain in a bet!`
+   }
 
 export const techStacks = [
       {

@@ -13,7 +13,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@types/react-lottie": "^1.2.6",
-    "framer-motion": "^10.0.1",
+    "framer-motion": "^10.12.16",
     "lottie-web": "^5.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
