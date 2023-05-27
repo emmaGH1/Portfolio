@@ -36,10 +36,10 @@ const Home = () => {
                   </a>
                 </div>
                 <div className='flex justify-center mt-5'>
-                  <a href='' target='_blank'> 
+                  <a href='https://github.com/emmaGH1' target='_blank'> 
                    <AiFillGithub className='w-10 h-10 mr-3 cursor-pointer text-light-primary dark:text-dark-primary hover:text-light-secondary hover:dark:text-dark-secondary' /> 
                   </a>
-                  <a href="" target='_blank'> 
+                  <a href="https://www.linkedin.com/in/maduakor-emmanuel-5a141b245/" target='_blank'> 
                     <AiFillLinkedin className='w-10 h-10 mr-1 cursor-pointer text-light-primary dark:text-dark-primary hover:text-light-secondary hover:dark:text-dark-secondary' />
                   </a>
                 </div>

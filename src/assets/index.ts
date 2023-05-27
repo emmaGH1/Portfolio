@@ -13,6 +13,10 @@ export { default as TailwindIcon } from './icons/tailwind-icon.png'
 export { default as HTMLIcon } from './icons/html-icon.png'
 export { default as CSSIcon } from './icons/css-icon.png'
 
+export { default as GitIcon } from './icons/git-icon.svg'
+export { default as ReactRouterIcon } from './icons/react-router-icon.svg'
+export { default as ChatGptIcon } from './icons/chatgpt-icon.png'
+
 
 export { default as Windbnb } from './images/Windbnb.png'
 export { default as DevJobs } from './images/devjobs.png'

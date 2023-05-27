@@ -1,4 +1,4 @@
-import { TSIcon, JSIcon, ReactIcon, NextJSIcon, ReduxIcon, TailwindIcon, HTMLIcon, CSSIcon} from './index'
+import { TSIcon, JSIcon, ReactIcon, NextJSIcon, ReduxIcon, TailwindIcon, HTMLIcon, CSSIcon, ChatGptIcon, GitIcon, ReactRouterIcon} from './index'
 import { FaReact} from 'react-icons/all'
 
 import { DevJobs, SpaceTourism, Windbnb } from './index'
@@ -63,6 +63,21 @@ export const techStacks = [
       {
          name: 'CSS',
          url: CSSIcon
+      }
+   ]
+
+   export const toolStack = [
+      {
+         name: 'Git',
+         url: GitIcon
+      },
+      {
+         name: 'ChatGPT',
+         url: ChatGptIcon
+      },
+      {
+         name: 'React Router',
+         url: ReactRouterIcon
       }
    ]
 

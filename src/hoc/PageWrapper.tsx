@@ -6,7 +6,7 @@ import { pageVariants } from '../utils/motion';
 const PageWrapper = <P extends object>(Component: ComponentType<P>) => {
 
   return (props: P) => (
-    <motion.div
+    <motion.div className='bg-yellow-900'
     >
       <Component {...props} />
     </motion.div>

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-
 import { useForm, SubmitHandler } from 'react-hook-form'
 import emailjs from '@emailjs/browser'
 import { UseLottieAnimation } from '../components';
 import { marsAnimationData } from '../assets';
+import { BsSendFill } from 'react-icons/all'
 
 interface formValuesProps {
   name: string,
@@ -55,13 +55,13 @@ const Contact = () => {
   }
 
   return (
-    <div id='contact' className='app__page primary'>
+    <div id='contact' className='app__page primary relative'>
       
       <h1 className='mt-20 md:mt-10 text-dark-accent ml-7 '>
         Let's <span className='text-blue-500 '>Connect!</span> 
       </h1>
 
-      <div className='flex flex-col-reverse items-center justify-between mx-auto mt-10 mb-10 lg:w-4/5 lg:flex-row-reverse'>  
+      <div className='flex flex-col-reverse items-center justify-between mx-auto mt-10 mb-10 lg:w-4/5 lg:flex-row-reverse md:mb-20'>  
           <form
           className="w-4/5 mx-auto md:w-2/4 xl:w-2/6"
           onSubmit={handleSubmit(onSubmit)}
@@ -109,8 +109,8 @@ const Contact = () => {
 
           <button
             type="submit"
-            className='w-full p-2 px-5 rounded-md dark:bg-dark-accent dark:text-dark-primary/80 bg-light-secondary text-dark-primary lg:py-3 hover:dark:bg-light-accent'
-          >Send Message
+            className='w-full p-2 px-5 rounded-md dark:bg-dark-accent dark:text-dark-primary/80 bg-light-secondary text-dark-primary lg:py-3 hover:dark:bg-light-accent flex justify-center items-center hover:bg-light-secondary/80'
+          >Send Message <BsSendFill className='ml-2' />
           </button>
 
           </form>
@@ -119,7 +119,6 @@ const Contact = () => {
            <UseLottieAnimation data={data}/>
           </div>
       </div>
-
     </div>
   )
 }
