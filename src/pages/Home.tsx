@@ -8,6 +8,13 @@ import { paragraphs } from '../assets/constants'
 
 const Home = () => {
   const data = JSON.stringify(heroAnimationData)
+
+  const handleDownload = () => {
+    const downloadLink: HTMLAnchorElement = document.createElement('a') as HTMLAnchorElement
+    downloadLink.href = '/Emmanuel_Maduakor_Resume.pdf'
+    downloadLink.target = '_blank'
+    downloadLink.click()
+  };
   
   return (
     <div id='home' className='h-full pt-20 primary lg:h-screen'>
@@ -31,9 +38,9 @@ const Home = () => {
 
               <div className='flex flex-col justify-center'>
                 <div className='flex justify-center'>
-                  <a href='../../public/Emmanuel_Maduakor_Resume.pdf' className='px-4 py-3 transition-colors rounded-md cursor-pointer bg-light-accent dark:bg-dark-accent hover:bg-dark-accent dark:hover:bg-transparent hover:dark:text-dark-primary dark:hover:underline' target='_blank'>
+                  <button className='px-4 py-3 transition-colors rounded-md cursor-pointer bg-light-accent dark:bg-dark-accent hover:bg-dark-accent dark:hover:bg-transparent hover:dark:text-dark-primary dark:hover:underline' onClick={handleDownload}>
                     download resume
-                  </a>
+                  </button>
                 </div>
                 <div className='flex justify-center mt-5'>
                   <a href='https://github.com/emmaGH1' target='_blank'> 

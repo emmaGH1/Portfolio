@@ -6,7 +6,7 @@ import { techStacks, toolStack } from '../assets/constants'
 const Skills = () => {
 
   return (
-    <div id='skills' className='relative flex flex-col items-center pt-20 mx-auto primary w-full app__page'>
+    <div id='skills' className='relative flex flex-col items-center pt-20 mx-auto primary w-full app__page '>
       <div className='text-3xl font-bold text-center md:text-4xl font-heading text-dark-accent md:text-start'>
         <div className='hidden md:flex'>I've been working with these technologies lately
         </div>
