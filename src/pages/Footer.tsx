@@ -1,14 +1,12 @@
 import React from 'react'
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
   return (
-    <div className='dark:bg-dark-primary-2 bg-primary-2 text-light-primary dark:text-dark-primary/80 py-5'>
-        <div className='flex flex-col w-9/10 mx-auto'>
-            <div className='flex mb-2 self-end'>
-                Made With React + Typescript 💖
-            </div>
+    <div className='py-5 shadow-md bg-light-primary-2 dark:bg-dark-primary-2 text-light-primary dark:text-dark-primary/80'>
+        <div className='flex justify-center mx-auto w-9/10 lg:justify-end'>
             <div>
-                Created by <span className='font-bold text-dark-accent'>Maduakor Emmanuel</span>
+                <span>Created by</span>  <span className='font-bold'>Maduakor Emmanuel  </span> © {currentYear}
             </div>
         </div>
     </div>
