@@ -24,7 +24,7 @@ export const fadeIn = (i: number) => ({
     opacity: 1,
     transition: {
       type: 'tween',
-      duration: i * .5,
+      duration: .2,
       ease: 'easeInOut',
     },
   },
