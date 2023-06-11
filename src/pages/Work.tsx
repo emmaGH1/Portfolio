@@ -1,7 +1,8 @@
 import React from 'react'
 import { BsArrowDownRight, BsArrowRight, BsGithub, VscLinkExternal } from 'react-icons/all'
-
+import { motion } from 'framer-motion';
 import { projects } from '../assets/constants'
+import { fadeIn } from '../utils'
 
 const Work = () => {
   
@@ -11,10 +12,10 @@ const Work = () => {
 
       <div className='grid mx-auto w-9/10 lg:w-4/5 lg:grid-cols-2'>
         {
-          projects.map((each, index: number) => {
+          projects.map((each, i: number) => {
             const { name, description, imageUrl, githubLink, liveLink} = each
             return (
-                  <div key={`#${name}`} className='mt-10 dark:bg-light-secondary/10 rounded-xl transition-all w-full lg:w-[470px] cursor-pointer shadow-2xl relative duration-300 app__work' 
+                  <motion.div key={`#${name}`} className='mt-10 dark:bg-light-secondary/10 rounded-xl transition-all w-full lg:w-[470px] cursor-pointer shadow-2xl relative duration-300 app__work' initial='hidden' whileInView='show' variants={fadeIn(i)}
                   >
 
                     <div className='app__work-img'>
@@ -51,7 +52,7 @@ const Work = () => {
                       </a>
                     </div>
 
-                  </div>
+                  </motion.div>
             )
           })
         }

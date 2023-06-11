@@ -4,7 +4,7 @@ import { GetGreetings, UseLottieAnimation } from '../components'
 import { heroAnimationData } from '../assets/index'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/all'
 import { paragraphs } from '../assets/constants'
-
+import { textMotion } from '../utils';
 
 const Home = () => {
   const data = JSON.stringify(heroAnimationData)
@@ -15,6 +15,8 @@ const Home = () => {
     downloadLink.target = '_blank'
     downloadLink.click()
   };
+
+  const introText = Array.from(paragraphs.intro.split(' '))
   
   return (
     <div id='home' className='h-full pt-20 primary lg:h-screen'>
@@ -33,7 +35,20 @@ const Home = () => {
             <div className='mb-10 mt-7'>
               <div className='flex flex-col justify-center mx-auto'>
                 <h1 className='flex justify-center p-0 my-0 font-bold text-dark-accent font-heading'>Frontend Dev🧑‍💻</h1>
-                <p className='flex justify-center mt-2 mb-5 text-center dark:text-dark-primary/50'>{paragraphs.intro}</p>                
+                <div className="flex justify-center mt-2 mb-5 text-center dark:text-dark-primary/50">
+                  {introText.map((p, i) => (
+                    <motion.p
+                      key={i}
+                      variants={textMotion(i)}
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{ once: true }}
+                      className='mr-1'
+                    >
+                      {p}
+                    </motion.p> 
+                  ))}
+                </div>             
               </div>
 
               <div className='flex flex-col justify-center'>
