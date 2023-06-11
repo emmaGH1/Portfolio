@@ -19,14 +19,13 @@ interface ProjectProps {
 export const paragraphs = {
        intro: `I build clean, responsive, and scalable websites.`,
        aboutMe: [
-         `Greetings! I'm Emma, a frontend web developer based in Imo, Nigeria.`,
-         `💻 I embark on digital quests, wielding the mighty powers of React and TypeScript to conjure enchanting web experiences.`,
-         `🚀 With React's modular sorcery and TypeScript's spell of type safety, I weave scalable incantations that bewitch users with their visual splendor.`,
-         `🎨 Guided by my keen eye for design, I craft pixel-perfect wonders that leave users spellbound and craving for more.
+         `Greetings! I'm Emma, a frontend web developer based in Imo, Nigeria 🌍. Currently, I'm studying Geology at the Federal University of Technology, Owerri (FUTO) 🎓.`,
+         `When it comes to web development, my passion lies in crafting captivating experiences that leave users impressed and engaged ✨. I pay close attention to my work, ensuring that I make the best out of it 🎨.`,
+         `I thrive on problem-solving and tackling challenges head-on, making sure that the code is reliable and free of pesky bugs 💡. Collaboration is key to my work—I love working with others to boost productivity and deliver high-quality results 🚀`,
+         `I am a big football fan😁.  PS: In my book, Cristiano Ronaldo is the 🐐 (Greatest of All Time)!.
          `,
-         `💡 As a code wizard, I thrive on solving enigmatic puzzles, employing TypeScript's arcane rituals to ensure bug-free spells that defy even the trickiest of errors.`,
-         `🌍 In the realm of collaboration, I harmonize with fellow adventurers, leveraging React and TypeScript to conjure powerful enchantments that elevate productivity and code quality.`,
-         `🌟 Ever eager to expand my knowledge, I embark on quests to uncover the latest secrets of React and TypeScript, honing my skills to deliver unparalleled web wizardry.`,
+         `I also love watching anime, the way their captivating stories and vibrant characters ignite my imagination. 💫`,
+         `I have a perpetual thirst for knowledge and a genuine curiosity to connect with people from diverse cultures. The opportunity to expand my understanding and engage with individuals from various backgrounds truly excites me. I believe that continuous learning and fostering meaningful connections are essential for personal and professional growth. 🏁`
        ],
       joke: `✨ Fun Developer Joke: Why did the web developer go broke? Because they lost their domain in a bet!`
    }
