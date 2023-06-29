@@ -16,7 +16,7 @@ const Home = () => {
     downloadLink.click()
   };
 
-  const introText = Array.from(paragraphs.intro.split(' '))
+  const introText = Array.from(paragraphs.intro.split(" "))
   
   return (
     <div id='home' className='h-full pt-20 primary lg:h-screen'>

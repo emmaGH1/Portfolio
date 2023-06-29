@@ -1,12 +1,10 @@
 import React from 'react'
-import { BsArrowDownRight, BsArrowRight, BsGithub, VscLinkExternal } from 'react-icons/all'
+import { BsGithub, VscLinkExternal } from 'react-icons/all'
 import { motion } from 'framer-motion';
 import { projects } from '../assets/constants'
 import { fadeIn } from '../utils'
 
-const Work = () => {
-  
-  return (
+const Work = () => (
     <div id='work' className='primary-2 h-[1500px] lg:h-[1000px]'>
       <h1 className='mt-16 ml-7 text-dark-accent'>These are some of my works</h1>
 
@@ -15,7 +13,7 @@ const Work = () => {
           projects.map((each, i: number) => {
             const { name, description, imageUrl, githubLink, liveLink} = each
             return (
-                  <motion.div key={`#${name}`} className='mt-10 dark:bg-light-secondary/10 rounded-xl transition-all w-full lg:w-[470px] cursor-pointer shadow-2xl relative duration-300 app__work' initial='hidden' whileInView='show' variants={fadeIn(i)}
+                  <motion.div key={`#${name}`} className='mt-10 dark:bg-light-secondary/10 rounded-xl transition-all w-full lg:w-[470px] cursor-pointer shadow-2xl relative duration-300 app__work' initial='hidden' whileInView='show' variants={fadeIn(i)} viewport={{ once: true }}
                   >
 
                     <div className='app__work-img'>
@@ -64,6 +62,6 @@ const Work = () => {
 
     </div>
   )
-}
+
 
 export default Work
