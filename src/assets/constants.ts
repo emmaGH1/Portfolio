@@ -1,8 +1,7 @@
 import { TSIcon, JSIcon, ReactIcon, NextJSIcon, ReduxIcon, TailwindIcon, HTMLIcon, CSSIcon, ChatGptIcon, GitIcon, ReactRouterIcon} from './index'
 import { FaReact} from 'react-icons/all'
 
-import { DevJobs, SpaceTourism, Windbnb } from './index'
-
+import { DevJobs, SpaceTourism, Windbnb, DashboardAnalytics } from './index'
 
 interface TechStacksProps {
    name: string,
@@ -87,6 +86,13 @@ export const projects: ProjectProps[] = [
       liveLink: 'http://dev-jobs-seven-wine.vercel.app/',
       githubLink: 'https://github.com/emmaGH1/DevJobs',
       description: 'Developed DevJobs, a frontend web application for job listings in the tech industry.'
+   },
+   {
+      name: 'Dashboard Analytics',
+      imageUrl: DashboardAnalytics,
+      liveLink: 'https://geepayhq-analytics-dashboard.vercel.app/',
+      githubLink: 'https://github.com/emmaGH1/geepayhq-analytics-dashboard',
+      description: 'Participating in an online hackathon, where I was tasked with creating a visually appealing and responsive design for an analytics dashboard.'
    },
    {
       name: 'WindBnB',
