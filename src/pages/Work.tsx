@@ -5,7 +5,7 @@ import { projects } from '../assets/constants'
 import { fadeIn } from '../utils'
 
 const Work = () => (
-    <div id='work' className='primary-2 h-[1500px] lg:h-[1000px]'>
+    <div id='work' className='primary-2 :h-full'>
       <h1 className='mt-16 ml-7 text-dark-accent'>These are some of my works</h1>
 
       <div className='grid mx-auto w-9/10 lg:w-4/5 lg:grid-cols-2'>
@@ -18,7 +18,7 @@ const Work = () => (
 
                     <div className='app__work-img'>
                       <img src={imageUrl} alt={name} 
-                      className='object-cover w-full pt-5 mx-auto  h-60'
+                      className='object-cover w-full pt-5 mx-auto h-60'
                       />
                     </div>
 
@@ -56,7 +56,7 @@ const Work = () => (
         }
       </div>
 
-      <a className='flex justify-center w-3/5 mx-auto mt-20 underline transition hover:text-light-secondary hover:dark:text-dark-accent' href='https://github.com/emmaGH1' target='_blank' >
+      <a className='flex justify-center w-3/5 mx-auto mt-20 mb-10 underline transition hover:text-light-secondary hover:dark:text-dark-accent' href='https://github.com/emmaGH1' target='_blank' >
         See more on Github ...
       </a>
 
